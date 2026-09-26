@@ -1,0 +1,6 @@
+{
+  "name": "InkCreed",
+  "description": "Countersign the plate. A closed register of makers and letterpress signatories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
