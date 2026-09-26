@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           onClick={() => onNavigate('/')}
           className="text-left font-display text-xl font-bold tracking-tight text-[#14181C] hover:opacity-85 transition-opacity"
         >
-          INKCREED
+          INKCREED.
         </button>
 
         {/* Zone 2: Navigation Links */}
