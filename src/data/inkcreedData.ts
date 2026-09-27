@@ -1,3 +1,12 @@
+import imgIris from '../assets/images/0001-iris.png';
+import imgRen from '../assets/images/0002-ren.png';
+import imgVelez from '../assets/images/0003-velez.png';
+import imgOkafor from '../assets/images/0004-okafor.png';
+import imgType from '../assets/images/0005-type.png';
+import imgSeal from '../assets/images/0006-seal.png';
+import imgHero from '../assets/images/register-hero.png';
+import imgLock from '../assets/images/style-lock.png';
+
 export interface PracticeItem {
   id: string;
   name: string;
@@ -9,8 +18,8 @@ export interface PracticeItem {
 }
 
 export interface Signatory {
-  id: string; // e.g. "0007"
-  slug: string; // e.g. "a-ren"
+  id: string;
+  slug: string;
   name: string;
   practice: string;
   practiceSlug: string;
@@ -70,7 +79,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'thread · knots · cloth',
     leadSignatory: 'A. Ren',
     leadPlate: '0007',
-    portrait: '/src/assets/images/portrait_binder_satchel_1790418887399.jpg',
+    portrait: imgRen,
     description: 'Ties every signature before it is filed. Uses one knot and repeats it until it disappears.',
   },
   {
@@ -79,7 +88,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'copper · acid · press blankets',
     leadSignatory: 'M. Sorel',
     leadPlate: '0012',
-    portrait: '/src/assets/images/portrait_plate_pressman_1790418900100.jpg',
+    portrait: imgHero,
     description: 'Etches cold-rolled copper with mordant baths. Regulates roller bite down to twelve microns.',
   },
   {
@@ -88,7 +97,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'nibs · walnut ink · ledgers',
     leadSignatory: 'C. Vane',
     leadPlate: '0031',
-    portrait: '/src/assets/images/portrait_script_calligrapher_1790418912496.jpg',
+    portrait: imgType,
     description: 'Enters the names into rag ledger books using fermented walnut husk ink and hand-split nibs.',
   },
   {
@@ -97,7 +106,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'wax · brass · ribbon',
     leadSignatory: 'I. Kael',
     leadPlate: '0089',
-    portrait: '/src/assets/images/portrait_seal_artisan_1790418921579.jpg',
+    portrait: imgSeal,
     description: 'Engraves matrix stamps in leaded bronze and affixes hot beeswax wafers to counter-folds.',
   },
   {
@@ -106,7 +115,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'gesso · chalk · size',
     leadSignatory: 'T. Oakes',
     leadPlate: '0142',
-    portrait: '/src/assets/images/portrait_ground_artisan_1790418935659.jpg',
+    portrait: imgLock,
     description: 'Prepares heavy woven sheets with washed slaked chalk and hide size for non-bleed absorbency.',
   },
   {
@@ -115,7 +124,7 @@ export const PRACTICES: PracticeItem[] = [
     elements: 'radio · carbon · field books',
     leadSignatory: 'J. Mercer',
     leadPlate: '0204',
-    portrait: '/src/assets/images/portrait_signal_registrar_1790418946041.jpg',
+    portrait: imgIris,
     description: 'Monitors provenance transmissions and records hash receipts via carbon transfer papers.',
   },
 ];
@@ -144,10 +153,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: '8.4 mm spine allowance · stitch pitch 12 mm',
       signatoryDate: 'Registered 14 August · Press: Solana',
       provenance: 'Registered on-chain as plate 0007. Countersigned at nocturnal run.',
-      fullBio: 'A. Ren has kept the binder bench for eleven continuous seasons. Her hands carry traces of bone folder burnish and beeswax. Ren rejects spiral, clamp, and wire; her register filings are sewn through the fold with seven-cord Irish linen. Her vow asserts that permanence is not stubbornness, but tension correctly distributed across a spine.',
+      fullBio:
+        'A. Ren has kept the binder bench for eleven continuous seasons. Her hands carry traces of bone folder burnish and beeswax. Ren rejects spiral, clamp, and wire; her register filings are sewn through the fold with seven-cord Irish linen. Her vow asserts that permanence is not stubbornness, but tension correctly distributed across a spine.',
       vowExcerpt: 'I bind not to imprison the page, but to grant it a spine that stands without lean.',
     },
-    portrait: '/src/assets/images/portrait_binder_satchel_1790418887399.jpg',
+    portrait: imgRen,
   },
   {
     id: '0012',
@@ -172,10 +182,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: '12 micron etching depth · 380 kg cylinder kiss',
       signatoryDate: 'Registered 18 August · Press: Solana',
       provenance: 'Plate 0012 counter-struck onto Somerset 300gsm proof sheet.',
-      fullBio: 'M. Sorel manages the etching bed and copper preparation. Working between iron oxide baths and heavy steel rollers, Sorel enforces a strict physical threshold: any plate showing roller deflection greater than a hairbreadth is scored and melted down.',
+      fullBio:
+        'M. Sorel manages the etching bed and copper preparation. Working between iron oxide baths and heavy steel rollers, Sorel enforces a strict physical threshold: any plate showing roller deflection greater than a hairbreadth is scored and melted down.',
       vowExcerpt: 'The metal yields only to acid and truth. We let the copper speak before the ink arrives.',
     },
-    portrait: '/src/assets/images/portrait_plate_pressman_1790418900100.jpg',
+    portrait: imgHero,
   },
   {
     id: '0031',
@@ -200,10 +211,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: 'Line weight 0.35 mm · drying window 180 seconds',
       signatoryDate: 'Registered 22 August · Press: Solana',
       provenance: 'Enscribed directly onto master parchment roll 01.',
-      fullBio: 'C. Vane is the scribe of the register ledger. Operating with hand-boiled walnut ink that deepens to warm bistre over decades, Vane translates cryptographic addresses into precise chancery cursives that can be read by human eyes three centuries hence.',
+      fullBio:
+        'C. Vane is the scribe of the register ledger. Operating with hand-boiled walnut ink that deepens to warm bistre over decades, Vane translates cryptographic addresses into precise chancery cursives that can be read by human eyes three centuries hence.',
       vowExcerpt: 'Let the stroke be dry before turning. Once laid down, no word is rewritten.',
     },
-    portrait: '/src/assets/images/portrait_script_calligrapher_1790418912496.jpg',
+    portrait: imgType,
   },
   {
     id: '0089',
@@ -228,10 +240,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: 'Impression dwell 45 seconds · wafer diameter 32 mm',
       signatoryDate: 'Registered 02 September · Press: Solana',
       provenance: 'Impressed on plate edge with matrix stamp K-08.',
-      fullBio: 'I. Kael engraves the seals that close every registered folio. Using microscopic burins under jewelers loupes, Kael cuts matrix reliefs that mechanically seal registration ribbons against illicit opening.',
+      fullBio:
+        'I. Kael engraves the seals that close every registered folio. Using microscopic burins under jewelers loupes, Kael cuts matrix reliefs that mechanically seal registration ribbons against illicit opening.',
       vowExcerpt: 'We seal what has been judged whole. Where the wax cools, debate ceases.',
     },
-    portrait: '/src/assets/images/portrait_seal_artisan_1790418921579.jpg',
+    portrait: imgSeal,
   },
   {
     id: '0142',
@@ -256,10 +269,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: 'Ground coat 40 gsm · surface moisture 7%',
       signatoryDate: 'Registered 11 September · Press: Solana',
       provenance: 'Ground prepared for plates 0100 through 0200.',
-      fullBio: 'T. Oakes controls the tactile baseline of the entire press. Paper made under Oakes direction does not bleed or feather even when loaded with high-density lampblack pigment under atmospheric humidity.',
+      fullBio:
+        'T. Oakes controls the tactile baseline of the entire press. Paper made under Oakes direction does not bleed or feather even when loaded with high-density lampblack pigment under atmospheric humidity.',
       vowExcerpt: 'Respect the foundation. If the ground is untrue, no ink can hold dignity.',
     },
-    portrait: '/src/assets/images/portrait_ground_artisan_1790418935659.jpg',
+    portrait: imgLock,
   },
   {
     id: '0204',
@@ -284,10 +298,11 @@ export const SIGNATORIES: Signatory[] = [
       pressTolerances: 'Block receipt latency < 400 ms · dual-register tally',
       signatoryDate: 'Registered 19 September · Press: Solana',
       provenance: 'Broadcast receipt confirmed across validator cluster.',
-      fullBio: 'J. Mercer bridges the mechanical press room with the decentralized consensus engine. Every transaction is countersigned in carbon proof sheets before being committed to on-chain state.',
+      fullBio:
+        'J. Mercer bridges the mechanical press room with the decentralized consensus engine. Every transaction is countersigned in carbon proof sheets before being committed to on-chain state.',
       vowExcerpt: 'Listen through the static. When the block confirms, impress the plate.',
     },
-    portrait: '/src/assets/images/portrait_signal_registrar_1790418946041.jpg',
+    portrait: imgIris,
   },
   {
     id: '0313',
@@ -302,20 +317,18 @@ export const SIGNATORIES: Signatory[] = [
     fieldNote: {
       role: 'Unassigned Plate',
       desk: 'Active bed',
-      points: [
-        'Prepared with raw copper ground.',
-        'Awaiting signatory countersign.',
-      ],
+      points: ['Prepared with raw copper ground.', 'Awaiting signatory countersign.'],
     },
     dossier: {
       medium: 'Unstruck cold copper plate, archival blank vellum',
       pressTolerances: 'Blank registry slot · 1:1 impression capacity',
       signatoryDate: 'Open · Opening Night',
       provenance: 'Allocated for the active countersign registry on Solana.',
-      fullBio: 'Plate 0313 represents the next open folio in the 444-plate register. Upon opening the register, the signatory name is recorded in the permanent on-chain ledger with single-plate provenance.',
+      fullBio:
+        'Plate 0313 represents the next open folio in the 444-plate register. Upon opening the register, the signatory name is recorded in the permanent on-chain ledger with single-plate provenance.',
       vowExcerpt: 'I enter the register not as spectator, but as signatory to the creed.',
     },
-    portrait: '/src/assets/images/portrait_binder_satchel_1790418887399.jpg',
+    portrait: imgVelez,
   },
   {
     id: '0314',
@@ -340,7 +353,7 @@ export const SIGNATORIES: Signatory[] = [
       fullBio: 'Reserved plate awaiting signatory authorization in the upcoming press run.',
       vowExcerpt: 'One name, one mark, no second impression.',
     },
-    portrait: '/src/assets/images/portrait_plate_pressman_1790418900100.jpg',
+    portrait: imgOkafor,
   },
 ];
 
@@ -348,32 +361,38 @@ export const CREED_VOWS = [
   {
     num: 'I',
     title: 'THE DECISION OF THE MARK',
-    statement: 'Ink is a decision. Once the plate touches the dampened rag, retraction is impossible. We make no marks that require an eraser.',
+    statement:
+      'Ink is a decision. Once the plate touches the dampened rag, retraction is impossible. We make no marks that require an eraser.',
   },
   {
     num: 'II',
     title: 'THE WITNESS OF THE SHEET',
-    statement: 'Paper is not a backdrop; paper is a witness. It remembers humidity, roller tonnage, and the trembling of a hurried hand.',
+    statement:
+      'Paper is not a backdrop; paper is a witness. It remembers humidity, roller tonnage, and the trembling of a hurried hand.',
   },
   {
     num: 'III',
     title: 'THE PURITY OF THE RUN',
-    statement: 'The register counts 444 plates. Not 445. No vanity proofs for friends. No hidden reserves kept in darkness.',
+    statement:
+      'The register counts 444 plates. Not 445. No vanity proofs for friends. No hidden reserves kept in darkness.',
   },
   {
     num: 'IV',
     title: 'ONE SIGNATURE, ONE SOUL',
-    statement: 'A signatory cannot divide their loyalty among fractions. One mark, one plate, one place in the ledger.',
+    statement:
+      'A signatory cannot divide their loyalty among fractions. One mark, one plate, one place in the ledger.',
   },
   {
     num: 'V',
     title: 'THE DISCIPLINE OF PRACTICES',
-    statement: 'Six practices divide the work. None may dilute the other. The binder does not etch; the etcher does not falsify the gall.',
+    statement:
+      'Six practices divide the work. None may dilute the other. The binder does not etch; the etcher does not falsify the gall.',
   },
   {
     num: 'VI',
     title: 'PERMANENCE AS COURTESY',
-    statement: 'We build for those who will handle these folios after our names are quiet. If it will not endure three hundred winters, strike it down.',
+    statement:
+      'We build for those who will handle these folios after our names are quiet. If it will not endure three hundred winters, strike it down.',
   },
 ];
 
@@ -385,8 +404,10 @@ export const LEDGER_ENTRIES: LedgerEntry[] = [
     dek: 'The copper blanket took the bite at 4:10 AM. We watched the lampblack settle into the grooves.',
     readTime: '4 min read',
     plateRef: 'Plate 0001',
-    leadParagraph: 'Before the press rolled, there was a complete silence in the workshop. The windows facing the river were opaque with predawn dew, and the only heat came from the paraffin brazier where the wax wafers were being softened. When the bed moved under the roller, the sound was not mechanical; it was the muffled sigh of damp linen yielding to steel.',
-    pullQuote: 'A press does not create authority. It simply records the exact instant when an oath became irreversible.',
+    leadParagraph:
+      'Before the press rolled, there was a complete silence in the workshop. The windows facing the river were opaque with predawn dew, and the only heat came from the paraffin brazier where the wax wafers were being softened. When the bed moved under the roller, the sound was not mechanical; it was the muffled sigh of damp linen yielding to steel.',
+    pullQuote:
+      'A press does not create authority. It simply records the exact instant when an oath became irreversible.',
     bodySections: [
       {
         heading: '1. The bite of Dutch mordant',
@@ -412,7 +433,8 @@ export const LEDGER_ENTRIES: LedgerEntry[] = [
     dek: 'Why registration marks exist, and why we refuse to trim the deckled edge of our folios.',
     readTime: '3 min read',
     plateRef: 'Plate 0014',
-    leadParagraph: 'Every pressman knows the four crop ticks—the quiet crosshair that tells whether the sheet sat straight or drifted during the kiss. In commercial offset printing, these marks are sliced away before delivery. In InkCreed, the registration ticks remain visible on every folio.',
+    leadParagraph:
+      'Every pressman knows the four crop ticks—the quiet crosshair that tells whether the sheet sat straight or drifted during the kiss. In commercial offset printing, these marks are sliced away before delivery. In InkCreed, the registration ticks remain visible on every folio.',
     pullQuote: 'To hide the crop marks is to pretend the print fell out of heaven without human hands.',
     bodySections: [
       {
@@ -434,7 +456,8 @@ export const LEDGER_ENTRIES: LedgerEntry[] = [
     dek: 'Oak galls crushed in red wine, fermented with vitriol. Why archival permanence demands acidity.',
     readTime: '5 min read',
     plateRef: 'Plate 0042',
-    leadParagraph: 'Modern chemical inks sit politely on the surface of synthetic paper like oil on glass. In fifty years, ultraviolet light breaks their bonds and they turn to phantom gray. Iron gall ink does not sit on paper; it eats into it. It forms an insoluble tannate complex that binds permanently with cellulose.',
+    leadParagraph:
+      'Modern chemical inks sit politely on the surface of synthetic paper like oil on glass. In fifty years, ultraviolet light breaks their bonds and they turn to phantom gray. Iron gall ink does not sit on paper; it eats into it. It forms an insoluble tannate complex that binds permanently with cellulose.',
     pullQuote: 'Permanence is not polite. It bites into the substrate so deep that fire alone can erase it.',
     bodySections: [
       {
@@ -465,34 +488,42 @@ export const IMPRESSIONS_DATA: ImpressionRecord[] = [
 export const NOTES_FAQ: FAQItem[] = [
   {
     question: 'What is a plate in InkCreed?',
-    answer: 'A plate is an individual, non-fungible entry in the 444-signatory register. Each plate is etched as a single copper matrix, printed once as a proof impression, and permanently recorded on the Solana blockchain under its unique registry identifier (e.g., IC-0007). There are no duplicate impressions or derivative editions.',
+    answer:
+      'A plate is an individual, non-fungible entry in the 444-signatory register. Each plate is etched as a single copper matrix, printed once as a proof impression, and permanently recorded on the Solana blockchain under its unique registry identifier (e.g., IC-0007). There are no duplicate impressions or derivative editions.',
   },
   {
     question: 'What is the total supply of the register?',
-    answer: 'Exactly 444 plates. Never 445. No reserve allocations, no promotional tokens, and no secondary mint passes. The register closes permanently once plate 444 is countersigned.',
+    answer:
+      'Exactly 444 plates. Never 445. No reserve allocations, no promotional tokens, and no secondary mint passes. The register closes permanently once plate 444 is countersigned.',
   },
   {
     question: 'Why Solana for the press?',
-    answer: 'Solana was chosen for cryptographic finality and sub-second deterministic settlement. When a signatory countersigns a plate, the transaction hash is verified directly against the physical registry run sheet without exorbitant gas penalties.',
+    answer:
+      'Solana was chosen for cryptographic finality and sub-second deterministic settlement. When a signatory countersigns a plate, the transaction hash is verified directly against the physical registry run sheet without exorbitant gas penalties.',
   },
   {
     question: 'What does "practice" mean?',
-    answer: 'A practice is the workshop discipline assigned to a plate. There are six practices: Binders, Plate, Script, Seal, Ground, and Signal. Practices are never blended or hybridized. Each signatory belongs strictly to one discipline.',
+    answer:
+      'A practice is the workshop discipline assigned to a plate. There are six practices: Binders, Plate, Script, Seal, Ground, and Signal. Practices are never blended or hybridized. Each signatory belongs strictly to one discipline.',
   },
   {
     question: 'When does the register open?',
-    answer: 'The register opens on Opening Night directly through the /register dossier. Signatories countersign plate by plate in sequential run order. 312 plates were inscribed during nocturnal proofs; 132 plates remain available.',
+    answer:
+      'The register opens on Opening Night directly through the /register dossier. Signatories countersign plate by plate in sequential run order. 312 plates were inscribed during nocturnal proofs; 132 plates remain available.',
   },
   {
     question: 'Can I transfer or resell my plate?',
-    answer: 'On-chain provenance follows standard Solana SPL token standards. However, the original countersignature in the physical ledger remains permanently tied to the initial signatory block height.',
+    answer:
+      'On-chain provenance follows standard Solana SPL token standards. However, the original countersignature in the physical ledger remains permanently tied to the initial signatory block height.',
   },
   {
     question: 'Are there whitelist spots or private sales?',
-    answer: 'No. InkCreed maintains no whitelists, Discord queues, or tiered admissions. The register is open strictly by plate order to those who countersign.',
+    answer:
+      'No. InkCreed maintains no whitelists, Discord queues, or tiered admissions. The register is open strictly by plate order to those who countersign.',
   },
   {
     question: 'Will there be a second volume or collection?',
-    answer: 'No. InkCreed is a closed volume. Once the 444th plate is bound, the matrix is struck and the register is sealed.',
+    answer:
+      'No. InkCreed is a closed volume. Once the 444th plate is bound, the matrix is struck and the register is sealed.',
   },
 ];
