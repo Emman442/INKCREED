@@ -7,6 +7,7 @@ interface PortraitMatProps {
   aspect?: string; // e.g. "aspect-[3/4]"
   plateNo?: string;
   showTicks?: boolean;
+  eager?: boolean;
 }
 
 export const PortraitMat: React.FC<PortraitMatProps> = ({
@@ -16,6 +17,7 @@ export const PortraitMat: React.FC<PortraitMatProps> = ({
   aspect = 'aspect-[3/4]',
   plateNo,
   showTicks = true,
+  eager = false,
 }) => {
   const [hasError, setHasError] = useState(false);
 
@@ -46,7 +48,8 @@ export const PortraitMat: React.FC<PortraitMatProps> = ({
         {!hasError ? (
           <img
             src={src}
-            alt={alt}
+            alt={alt}   
+            loading={eager ? 'eager' : 'lazy'}
             referrerPolicy="no-referrer"
             onError={() => setHasError(true)}
             className="w-full h-full object-cover object-center grayscale contrast-115 transition-transform duration-500 hover:scale-[1.01]"

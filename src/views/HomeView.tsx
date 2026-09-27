@@ -131,6 +131,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onFilterPractice
                 src={featuredSignatory.portrait}
                 alt={featuredSignatory.name}
                 plateNo={featuredSignatory.plateNumber}
+                eager
               />
             </div>
 
